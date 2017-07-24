@@ -686,7 +686,7 @@ func (r *CloudProvider) InstanceType(nodeName types.NodeName) (string, error) {
 	}
 
 	// Maybe do something smarter here
-	return "rancher", nil
+	return "", nil
 }
 
 // InstanceTypeByProviderID returns the cloudprovider instance type of the node with the specified unique providerID
@@ -861,8 +861,8 @@ func (r *CloudProvider) getHostByName(name string) (*Host, error) {
 // GetZone is an implementation of Zones.GetZone
 func (r *CloudProvider) GetZone() (cloudprovider.Zone, error) {
 	return cloudprovider.Zone{
-		FailureDomain: "FailureDomain1",
-		Region:        "Region1",
+		FailureDomain: "",
+		Region:        "",
 	}, nil
 }
 
